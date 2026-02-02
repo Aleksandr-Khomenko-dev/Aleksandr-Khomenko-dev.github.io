@@ -1,4 +1,4 @@
-/* ====== BASE / PALETTE ====== */
+
 :root {
   --bg: #0b0c0f;
   --panel: #111317;
@@ -19,7 +19,7 @@ html {
   scroll-behavior: smooth;
 }
 
-/* ====== BODY (единственный) ====== */
+
 body {
   margin: 0;
   color: var(--text);
@@ -34,7 +34,8 @@ body {
   background-attachment: fixed;
 }
 
-/* ====== GLOBAL ====== */
+
+
 .main {
   padding-bottom: 28px;
 }
@@ -43,7 +44,7 @@ section {
   scroll-margin-top: calc(var(--topbar-h) + 16px);
 }
 
-/* ====== TOPBAR ====== */
+
 .topbar {
   position: sticky;
   top: 0;
@@ -81,7 +82,7 @@ section {
   background: rgba(255, 255, 255, 0.06);
 }
 
-/* ====== LOGO (одна версия) ====== */
+
 .logo {
   width: 54px;
   height: 54px;
@@ -107,7 +108,7 @@ section {
   border-color: rgba(255, 255, 255, 0.85);
 }
 
-/* ====== HERO ====== */
+
 .hero {
   min-height: 100vh;
   display: flex;
@@ -144,7 +145,7 @@ section {
   margin-bottom: 26px;
 }
 
-/* ====== BUTTONS ====== */
+
 .btn {
   border-radius: 999px;
   font-weight: 800;
@@ -164,7 +165,7 @@ section {
   border: 2px solid rgba(255, 255, 255, 0.2);
 }
 
-/* ====== SECTIONS ====== */
+
 .section {
   padding: 48px 0;
   border-top: 1px solid var(--line);
@@ -174,17 +175,17 @@ section {
   background: var(--panel);
 }
 
-/* ================= EXPERIENCE ================= */
+
 #experience .section-header {
   margin-bottom: 28px;
 }
 
-/* ВАЖНО: делаем колонки flex, чтобы карточки были одинаковой высоты */
+ высоты */
 #experience .row.g-4 > [class*="col-"] {
   display: flex;
 }
 
-/* Карточка: растягивается на всю высоту колонки */
+
 #experience .project-card {
   max-width: 1500px;
   margin: 100 auto;
@@ -197,47 +198,47 @@ section {
   background: rgba(255, 255, 255, 0.055);
 }
 
-/* Контент внутри: пусть занимает всю высоту */
+
 #experience .project-content {
   max-width: 640px;
 
-  margin-left: 10px; /* ⬅️ ключ */
+  margin-left: 10px; 
   margin-right: auto;
 
-  padding: 32px 0; /* как в About */
+  padding: 32px 0;
 }
 
-/* Заголовок: без лишних верхних отступов */
+
 #experience .project-title {
   font-weight: 900;
   font-size: 1.05rem;
   letter-spacing: 0.2px;
 
-  margin: 0 0 18px 0; /* ⬅️ ключ: фиксируем */
+  margin: 0 0 18px 0; 
   color: rgba(255, 255, 255, 0.95);
 }
 
-/* Текст: исправляем margin (у тебя было margin: 30;) */
+
 #experience .project-text {
   color: rgba(255, 255, 255, 0.72);
   line-height: 1.65;
 
-  margin: 0; /* ⬅️ ключ: фиксируем */
+  margin: 0; 
 }
 
-/* Дата */
+
 #experience .project-text strong {
   color: rgba(255, 255, 255, 0.92);
   font-weight: 800;
 }
 
-/* Акцент */
+
 #experience .project-card.is-primary {
   border-color: rgba(255, 255, 255, 0.22);
   box-shadow: 0 16px 46px rgba(0, 0, 0, 0.6);
 }
 
-/* Mobile */
+
 @media (max-width: 780px) {
   #experience .project-content {
     padding: 22px 18px;
@@ -245,11 +246,11 @@ section {
 }
 
 #projects {
-  background: #0b0c0f; /* чистый, плотный чёрный */
+  background: #0b0c0f; 
   position: relative;
 }
 #projects .project-card {
-  background: #14161b; /* плотный card background */
+  background: #14161b; 
   border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 18px;
 
@@ -310,7 +311,7 @@ section {
   color: rgba(255, 255, 255, 0.55);
 }
 
-/* ====== CONTACT ====== */
+
 .contact-form {
   background: var(--card);
   border: 1px solid var(--line);
@@ -318,7 +319,7 @@ section {
   padding: 24px;
 }
 
-/* ====== FOOTER ====== */
+
 .footer {
   padding: 18px 0;
   border-top: 1px solid var(--line);
@@ -348,7 +349,7 @@ section {
   background: rgba(255, 255, 255, 0.04);
 }
 
-/* ====== LANGUAGE SWITCH ====== */
+
 .lang-switch {
   position: absolute;
   top: calc(var(--topbar-h) + 14px);
@@ -371,7 +372,7 @@ section {
   text-decoration: underline;
 }
 
-/* ====== RESPONSIVE ====== */
+
 @media (max-width: 780px) {
   .topnav {
     flex-direction: column;
@@ -388,7 +389,6 @@ section {
   }
 }
 
-/* ===== SKILLS ===== */
 .skills {
   text-align: center;
 }
@@ -449,4 +449,43 @@ section {
   font-size: 13px;
   letter-spacing: 1px;
   color: #000;
+}
+
+@media (max-width: 768px){
+  body{
+    background-size: contain;       
+    background-position: top center; 
+    background-attachment: scroll;   
+  }
+}
+@media (max-width: 780px){
+  .topbar{
+    height: auto;            
+    padding: 10px 0;
+  }
+}
+@media (max-width: 780px){
+  .topnav{
+    flex-direction: column;    
+    align-items: center;
+    gap: 10px;
+  }
+}
+@media (max-width: 780px){
+  .topnav__links{
+    justify-content: center;
+    flex-wrap: wrap;           
+    gap: 8px;
+  }
+
+  .topnav__link{
+    font-size: .85rem;
+    padding: 6px 10px;
+  }
+}
+@media (max-width: 780px){
+  .lang-switch{
+    position: static;         
+    margin-top: 6px;
+  }
 }
